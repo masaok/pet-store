@@ -13,6 +13,8 @@ import Contact from './components/Contact'
 import Footer from './components/shared/Footer'
 import GlobalFooter from './components/shared/GlobalFooter'
 
+import NotFound from './components/errors/NotFound'
+
 const routing = (
   <Router>
     <div>
@@ -32,12 +34,14 @@ const routing = (
       </ul>
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/dogs" component={Dogs} />
-        <Route path="/users" component={Users} />
-        <Route path="/contact" component={Contact} />
+        <Route exact path="/dogs" component={Dogs} />
+        <Route exact path="/dogs/:breed" component={Dogs} />
+        <Route exact path="/users" component={Users} />
+        <Route exact path="/contact" component={Contact} />
+        <Route component={NotFound} />
       </Switch>
       <Switch>
-        <Route path="/" component={Footer} />
+        <Route exact path="/" component={Footer} title="Home" />
       </Switch>
       <Switch>
         <Route path="/" component={GlobalFooter} />
