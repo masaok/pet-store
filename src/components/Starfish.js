@@ -1,6 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-class Dogs extends React.Component {
+import { withStyles } from '@material-ui/core/styles'
+
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+
+const styles = theme => ({
+  root: {
+    backgroundColor: '#e8eeed',
+    display: 'flex',
+    maxWidth: '100vw',
+    flexDirection: 'column',
+    overflow: 'auto',
+  }
+})
+
+class Starfish extends React.Component {
 
   constructor(props) {
     super(props);
@@ -35,13 +49,32 @@ class Dogs extends React.Component {
 
     return (
       <div>
-        <h1>Dogs</h1>
-        <h1>Breed: {breed}</h1>
-        <h1>Random image:</h1>
+        <h1>Starfish are cool</h1>
+        <h2>The Starfish component is wrapped in withStyles</h2>
+        <h3><a href="https://material-ui.com/styles/basics/#higher-order-component-api">MUI Styling High Order Components withStyles</a></h3>
         <h1><img src={this.state.image_url}
-                 alt={this.state.image_url} /></h1>
+          alt={this.state.image_url} /></h1>
+        <h2>Typography and Box example:</h2>
+        <a href="https://material-ui.com/components/box/">MUI Box</a>
+        <h3>
+          The colors come from the <a href="https://material-ui.com/customization/default-theme/">default theme</a>
+        </h3>
+        <Typography component="div" variant="body1">
+          <Box color="primary.main">primary.main</Box>
+          <Box color="secondary.main">secondary.main</Box>
+          <Box color="error.main">error.main</Box>
+          <Box color="text.primary">text.primary</Box>
+          <Box color="text.secondary">text.secondary</Box>
+          <Box color="text.disabled">text.disabled</Box>
+          <Box color="text.hint">text.hint</Box>
+        </Typography>
       </div>
     )
   }
 }
-export default Dogs
+// export default Starfish
+export default withStyles(styles)(Starfish)
+
+// Dondi uses "withTheme: true", but the default theme colors worked without it, so I left it commented
+// https://github.com/mui-org/material-ui/issues/8937#issuecomment-341085210
+// export default withStyles(styles, { withTheme: true })(Starfish)
