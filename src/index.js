@@ -9,6 +9,7 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import Dogs from './components/Dogs'
 import Users from './components/Users'
 import Contact from './components/Contact'
+import Starfish from './components/Starfish'
 
 import Footer from './components/shared/Footer'
 import GlobalFooter from './components/shared/GlobalFooter'

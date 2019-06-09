@@ -7,6 +7,7 @@ class Dogs extends React.Component {
 
     this.state = {
       data: null,
+      image_url: 'https://images-na.ssl-images-amazon.com/images/I/61cyfz198BL._SX425_.jpg',
     };
   }
 
@@ -37,10 +38,8 @@ class Dogs extends React.Component {
         <h1>Dogs</h1>
         <h1>Breed: {breed}</h1>
         <h1>Random image:</h1>
-        <h1><img src={this.state.data && this.state.data.message}
-                 alt={this.state.data && this.state.data.message} /></h1>
-        <h2>{this.state.data && this.state.data.message}</h2>
-        <Link to="/contact">Contact</Link>
+        <h1><img src={this.state.image_url}
+                 alt={this.state.image_url} /></h1>
       </div>
     )
   }
