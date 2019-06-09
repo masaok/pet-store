@@ -4,6 +4,11 @@ import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+/**
+ * This styles variable is required by withStyles at the bottom, but...
+ * none of the styling is actually used on this page yet
+ * @param {*} theme 
+ */
 const styles = theme => ({
   root: {
     backgroundColor: '#e8eeed',
@@ -20,33 +25,11 @@ class Starfish extends React.Component {
     super(props);
 
     this.state = {
-      data: null,
       image_url: 'https://images-na.ssl-images-amazon.com/images/I/61cyfz198BL._SX425_.jpg',
     };
   }
 
-  componentDidMount() {
-    fetch('https://dog.ceo/api/breeds/image/random')
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        console.log(data)
-        this.setState({ data })
-      });
-  }
-
   render() {
-    const { match } = this.props
-    // const { message } = this.state.data
-
-    console.log("DOGS > RENDER > state:")
-    console.log(this.state)
-
-    const breed = match.params.breed
-
-    // console.log(message)
-
     return (
       <div>
         <h1>Starfish are cool</h1>
