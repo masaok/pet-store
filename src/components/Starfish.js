@@ -72,9 +72,20 @@ class Starfish extends React.Component {
     )
   }
 }
+
+
+/**
+ * The default way to export a component
+ */
 // export default Starfish
+
+/**
+ * The basic way to export a component withStyles
+ */
 export default withStyles(styles)(Starfish)
 
-// Dondi uses "withTheme: true", but the default theme colors worked without it, so I left it commented
-// https://github.com/mui-org/material-ui/issues/8937#issuecomment-341085210
+/**
+ * Dondi uses "withTheme: true", but the default theme colors worked without it, so I left it commented
+ * https://github.com/mui-org/material-ui/issues/8937#issuecomment-341085210
+ */
 // export default withStyles(styles, { withTheme: true })(Starfish)
