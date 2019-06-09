@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 import Dogs from './components/Dogs'
 import Users from './components/Users'
@@ -12,32 +12,23 @@ import Contact from './components/Contact'
 
 import Footer from './components/shared/Footer'
 import GlobalFooter from './components/shared/GlobalFooter'
+import GlobalHeader from './components/shared/GlobalHeader'
 
 import NotFound from './components/errors/NotFound'
 
 const routing = (
   <Router>
     <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/dogs">Dogs</Link>
-        </li>
-        <li>
-          <Link to="/users">Users</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
+      <Switch>
+        <Route path="/" component={GlobalHeader} />
+      </Switch>
       <Switch>
         <Route exact path="/" component={App} />
         <Route exact path="/dogs" component={Dogs} />
         <Route exact path="/dogs/:breed" component={Dogs} />
         <Route exact path="/users" component={Users} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/starfish" component={Starfish} />
         <Route component={NotFound} />
       </Switch>
       <Switch>
