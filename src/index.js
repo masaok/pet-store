@@ -25,6 +25,7 @@ import Dogs from './components/Dogs'
 import Users from './components/Users'
 import Contact from './components/Contact'
 import Starfish from './components/Starfish'
+import Baboon from './components/Baboon'
 
 import Footer from './components/shared/Footer'
 import GlobalFooter from './components/shared/GlobalFooter'
@@ -32,7 +33,15 @@ import GlobalHeader from './components/shared/GlobalHeader'
 
 import NotFound from './components/errors/NotFound'
 
-// https://material-ui.com/customization/themes/#createmuitheme-options-theme
+/**
+ * Set the page title (shows up in browser tab)
+ */
+document.title = "Pet Store Default Title"
+
+/**
+ * Override Material UI default theme here
+ * https://material-ui.com/customization/themes/#createmuitheme-options-theme
+ */
 const theme = createMuiTheme({
   palette: {
     secondary: {
@@ -60,6 +69,7 @@ const routing = (
             <Route exact path="/users" component={Users} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/starfish" component={Starfish} />
+            <Route exact path="/baboon" component={Baboon} />
             <Route component={NotFound} />
           </Switch>
           <Switch>

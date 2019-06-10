@@ -26,6 +26,10 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount() {
+    document.title = "Pet Store App Home" // set the title only when this component is mounted
+  }
+
   render() {
     const { default_image, status } = this.state
 
@@ -33,9 +37,9 @@ class App extends React.Component {
     return (
       <div>
         <h1>Home</h1>
-        <h2 style={{margin: 10}}>Status: {status}</h2>
+        <h2 style={{ margin: 10 }}>Status: {status}</h2>
         <Toggle changeHandler={this.handleChange} />
-        { status === "on" ?
+        {status === "on" ?
           <img src={default_image} alt={default_image} /> :
           ''
         }
