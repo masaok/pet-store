@@ -1,7 +1,7 @@
 # TODO
 
--  Add multi level Router example
--  Add Redirect example
+- Add multi level Router example
+- Add Redirect example
 
 # Boilerplate
 
