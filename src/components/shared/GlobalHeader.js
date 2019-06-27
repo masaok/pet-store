@@ -13,6 +13,7 @@ class GlobalHeader extends React.Component {
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/starfish">Starfish with Styles</Link></li>
           <li><Link to="/baboon">Baboon Bootstrap Demo</Link></li>
+          <li><Link to="/meerkat">Meerkat useMediaQuery Responsive Demo</Link></li>
         </ul>
       </div>
     )

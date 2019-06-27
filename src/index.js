@@ -26,6 +26,7 @@ import Users from './components/Users'
 import Contact from './components/Contact'
 import Starfish from './components/Starfish'
 import Baboon from './components/Baboon'
+import Meerkat from './components/Meerkat'
 
 import Footer from './components/shared/Footer'
 import GlobalFooter from './components/shared/GlobalFooter'
@@ -70,6 +71,7 @@ const routing = (
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/starfish" component={Starfish} />
             <Route exact path="/baboon" component={Baboon} />
+            <Route exact path="/meerkat" component={Meerkat} />
             <Route component={NotFound} />
           </Switch>
           <Switch>
