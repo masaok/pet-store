@@ -1,3 +1,10 @@
+# Quickstart
+
+```
+npm install
+npm start
+```
+
 # TODO
 
 - Add multi level Router example
