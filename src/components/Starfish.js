@@ -30,10 +30,12 @@ class Starfish extends React.Component {
   }
 
   render() {
+    const { classes } = this.props
     return (
       <div>
         <h1>Starfish are cool</h1>
         <h2>The Starfish component is wrapped in withStyles</h2>
+        <h2 className={classes.root}>This is styled with the root style</h2>
         <h3><a href="https://material-ui.com/styles/basics/#higher-order-component-api">MUI Styling High Order Components withStyles</a></h3>
         <h1><img src={this.state.image_url}
           alt={this.state.image_url} /></h1>
