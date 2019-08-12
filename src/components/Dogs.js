@@ -64,8 +64,12 @@ class Dogs extends React.Component {
         <h1>Breed: {breed}</h1>
         <h1>Random image:</h1>
         <Toggle changeHandler={this.handleImageChange} />
-        <h1><img src={this.state.showImage && this.state.data && this.state.data.message}
-                 alt={this.state.data && this.state.data.message} /></h1>
+        <h1>
+          
+          {this.state.showImage && <img src={this.state.data && this.state.data.message}
+                 alt={this.state.data && this.state.data.message} />}
+                 
+        </h1>
         <Toggle changeHandler={this.handleChange} />
         <h2>{this.state.showStatus && this.state.data && this.state.data.status}</h2>         
         <h2>{this.state.data && this.state.data.message}</h2>
