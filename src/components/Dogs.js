@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Toggle from './Toggle';
+
 class Dogs extends React.Component {
 
   constructor(props) {
@@ -7,7 +9,31 @@ class Dogs extends React.Component {
 
     this.state = {
       data: null,
+      showStatus: true,
+      showImage: true,
     };
+  }
+  handleImageChange = () => {
+    if (this.state.showImage) {
+      this.setState({
+        showImage: false
+      })
+    } else {
+      this.setState({
+        showImage: true
+      })
+  }
+  }
+  handleChange = () => {
+    if (this.state.showStatus) {
+      this.setState({
+        showStatus: false
+      })
+    } else {
+      this.setState({
+        showStatus: true
+      })
+    }
   }
 
   componentDidMount() {
@@ -37,8 +63,11 @@ class Dogs extends React.Component {
         <h1>Dogs</h1>
         <h1>Breed: {breed}</h1>
         <h1>Random image:</h1>
-        <h1><img src={this.state.data && this.state.data.message}
+        <Toggle changeHandler={this.handleImageChange} />
+        <h1><img src={this.state.showImage && this.state.data && this.state.data.message}
                  alt={this.state.data && this.state.data.message} /></h1>
+        <Toggle changeHandler={this.handleChange} />
+        <h2>{this.state.showStatus && this.state.data && this.state.data.status}</h2>         
         <h2>{this.state.data && this.state.data.message}</h2>
         <Link to="/contact">Contact</Link>
       </div>
