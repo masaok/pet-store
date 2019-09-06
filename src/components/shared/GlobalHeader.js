@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 class GlobalHeader extends React.Component {
   render() {
@@ -34,7 +34,7 @@ class GlobalHeader extends React.Component {
           </li>
         </ul>
       </div>
-    );
+    )
   }
 }
-export default GlobalHeader;
+export default GlobalHeader

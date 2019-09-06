@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export function DogsWithHooks({ match }) {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({})
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('https://dog.ceo/api/breeds/image/random');
+      const response = await fetch('https://dog.ceo/api/breeds/image/random')
       if (response) {
-        let json = await response.json();
-        console.log('response', response);
-        setData(json);
+        let json = await response.json()
+        console.log('response', response)
+        setData(json)
       }
     }
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
-  const breed = match.params.breed;
+  const breed = match.params.breed
 
   return (
     <div>
@@ -29,5 +29,5 @@ export function DogsWithHooks({ match }) {
       <h2>{data && data.message}</h2>
       <Link to='/contact'>Contact</Link>
     </div>
-  );
+  )
 }
