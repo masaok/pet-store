@@ -2,17 +2,17 @@ import React from 'react'
 import Card from './Card'
 class Contact extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
-      name: "Masao"
-    };
+      name: 'Masao',
+    }
   }
 
-  updateName = (event) => {
+  updateName = event => {
     console.log(event.target.value)
     this.setState({
-      name: event.target.value
+      name: event.target.value,
     })
   }
 

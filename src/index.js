@@ -1,11 +1,11 @@
 /**
  * Boilerplate React App stuff
  */
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
 
 /**
  * Routing stuff
@@ -33,11 +33,12 @@ import GlobalFooter from './components/shared/GlobalFooter'
 import GlobalHeader from './components/shared/GlobalHeader'
 
 import NotFound from './components/errors/NotFound'
+import { DogsWithHooks } from './components/DogsWithHooks'
 
 /**
  * Set the page title (shows up in browser tab)
  */
-document.title = "Pet Store Default Title"
+document.title = 'Pet Store Default Title'
 
 /**
  * Override Material UI default theme here
@@ -46,7 +47,7 @@ document.title = "Pet Store Default Title"
 const theme = createMuiTheme({
   palette: {
     secondary: {
-      main: '#00ff00' // overwrite secondary.main to green
+      main: '#00ff00', // overwrite secondary.main to green
     },
   },
 })
@@ -61,24 +62,26 @@ const routing = (
       <Router>
         <div>
           <Switch>
-            <Route path="/" component={GlobalHeader} />
+            <Route path='/' component={GlobalHeader} />
           </Switch>
           <Switch>
-            <Route exact path="/" component={App} />
-            <Route exact path="/dogs" component={Dogs} />
-            <Route exact path="/dogs/:breed" component={Dogs} />
-            <Route exact path="/users" component={Users} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/starfish" component={Starfish} />
-            <Route exact path="/baboon" component={Baboon} />
-            <Route exact path="/meerkat" component={Meerkat} />
+            <Route exact path='/' component={App} />
+            <Route exact path='/dogs' component={Dogs} />
+            <Route exact path='/dogswithhooks' component={DogsWithHooks} />
+
+            <Route exact path='/dogs/:breed' component={Dogs} />
+            <Route exact path='/users' component={Users} />
+            <Route exact path='/contact' component={Contact} />
+            <Route exact path='/starfish' component={Starfish} />
+            <Route exact path='/baboon' component={Baboon} />
+            <Route exact path='/meerkat' component={Meerkat} />
             <Route component={NotFound} />
           </Switch>
           <Switch>
-            <Route exact path="/" component={Footer} title="Home" />
+            <Route exact path='/' component={Footer} title='Home' />
           </Switch>
           <Switch>
-            <Route path="/" component={GlobalFooter} />
+            <Route path='/' component={GlobalFooter} />
           </Switch>
         </div>
       </Router>
@@ -92,4 +95,4 @@ ReactDOM.render(routing, document.getElementById('root'))
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.unregister()
