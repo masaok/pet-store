@@ -12,4 +12,4 @@ npm start
 
 # Related Presentation
 
-https://docs.google.com/presentation/d/1jX-j8qkhvdEKBuKN_cbTIhuEIhqyPwf6ECmWfDfqcdU
+https://docs.google.com/presentation/d/1jX-j8qkhvdEKBuKN_cbTIhuEIhqyPwf6ECmWfDfqcdU/edit?usp=sharing
