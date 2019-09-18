@@ -7,6 +7,7 @@ npm start
 
 # TODO
 
+- Convert everything to use hooks: https://reactjs.org/docs/hooks-intro.html
 - Add multi level Router example
 - Add Redirect example
 
